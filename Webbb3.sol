@@ -18,7 +18,9 @@ contract Webbb3 {
     constructor() {
         owner = msg.sender;
     }
-
+    function getCurrentVoting () public view returns (Voting memory){
+        return votings[currentVoting];
+    }
     function addVoting(string memory option1, string memory option2, uint timeToVote) public {
        require(msg.sender == owner, "invalid Sender");
 
