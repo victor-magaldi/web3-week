@@ -1,6 +1,6 @@
 "use client";
 
-export default function Button() {
+export function Button() {
   const handleClick = () => {
     console.log("handleClick");
   };

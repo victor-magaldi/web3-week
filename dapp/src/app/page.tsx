@@ -1,3 +1,5 @@
+import { Button } from "@/components/Button";
+import { Footer } from "@/components/Footer";
 import Head from "next/head";
 
 export default function Home() {
@@ -25,26 +27,12 @@ export default function Home() {
             <p className="lead mb-3">
               Autentique-se com sua carteira e deixe seu voto para o Paredão
             </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start"></div>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+              <Button />
+            </div>
           </div>
         </div>
-        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p className="col-md-4 mb-0 text-body-secondary">
-            &copy; 2024 Webbb3, INC
-          </p>
-          <ul className="nav col-md-4 justify-content-end">
-            <li className="nav-item">
-              <a href="/" className="nav-link px-2 text-body-secondary">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="/about" className="nav-link px-2 text-body-secondary">
-                About
-              </a>
-            </li>
-          </ul>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
