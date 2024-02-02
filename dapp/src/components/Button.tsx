@@ -1,8 +1,13 @@
 "use client";
+import { login } from "@/service/web3Service";
+import { useState } from "react";
 
 export function Button() {
-  const handleClick = () => {
-    console.log("handleClick");
+  const [message, setMessage] = useState("");
+
+  const handleClick = async () => {
+    const wallet = await login();
+    console.log(wallet);
   };
   return (
     <button
@@ -18,6 +23,7 @@ export function Button() {
         title="Conectar com Metamask"
       />
       Conectar com Metamask
+      <p className="message">{message}</p>
     </button>
   );
 }

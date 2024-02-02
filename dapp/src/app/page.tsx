@@ -1,10 +1,8 @@
 import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import Head from "next/head";
-import { useState } from "react";
 
 export default function Home() {
-  const [message, useMessage] = useState("teste");
   return (
     <div>
       <Head>
@@ -32,7 +30,6 @@ export default function Home() {
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
               <Button />
             </div>
-            <p className="message">{message}</p>
           </div>
         </div>
         <Footer />
