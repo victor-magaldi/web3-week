@@ -1,10 +1,6 @@
-"use client";
 import Head from "next/head";
 
 export default function Home() {
-  const handleClick = () => {
-    console.log("handleClick");
-  };
   return (
     <div>
       <Head>
@@ -29,22 +25,7 @@ export default function Home() {
             <p className="lead mb-3">
               Autentique-se com sua carteira e deixe seu voto para o Paredão
             </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button
-                type="button"
-                className="btn btn-primary btn-lg px-4 me-md-2"
-                onClick={handleClick}
-              >
-                <img
-                  src="/metamask.svg"
-                  width={64}
-                  alt="Conectar com Metamask"
-                  className="me-3"
-                  title="Conectar com Metamask"
-                />
-                Conectar com Metamask
-              </button>
-            </div>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-start"></div>
           </div>
         </div>
         <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
