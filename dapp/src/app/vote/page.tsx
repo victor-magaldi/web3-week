@@ -1,7 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/Footer";
-import { getCurrentVotin, addvote } from "@/service/web3Service";
+import { getCurrentVoting, addvote } from "@/service/web3Service";
 import Head from "next/head";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -91,11 +91,15 @@ export default function Home() {
                 disabled={false}
                 onClick={() => {
                   console.log("vote1");
+
+                  addvote(1)
+                    .then(() => {
+                      setShowVotes(1);
+                    })
+                    .catch((err) => console.error(err));
                 }}
               >
-                {showVotes === 2
-                  ? Number(voting.votes1) + 1
-                  : Number(voting.votes1)}
+                Quero que esse saia
               </button>
             )}
           </div>
@@ -124,12 +128,16 @@ export default function Home() {
                 className="btn btn-primary p-3 my-2 d-block mx-auto"
                 disabled={false}
                 onClick={() => {
-                  console.log("vote1");
+                  console.log("vote2");
+
+                  addvote(1)
+                    .then(() => {
+                      setShowVotes(1);
+                    })
+                    .catch((err) => console.error(err));
                 }}
               >
-                {showVotes === 2
-                  ? Number(voting.votes2) + 1
-                  : Number(voting.votes2)}
+                Quero que esse saia
               </button>
             )}
           </div>
